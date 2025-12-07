@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
              this.textContent = 'Menú Descargado';
         });
     }
-
     
     const btnPromocion = document.getElementById('btn-promocion-secreta');
     const codigoPromocion = document.getElementById('codigo-promocion');
@@ -43,15 +42,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (codigoPromocion.textContent === '') {
                 codigoPromocion.textContent = 'CUPONLATTEART20';
                 this.textContent = '¡Código Activado! (20% OFF)';
-                codigoPromocion.classList.add('text-danger', 'fw-bold');
+                codigoPromocion.classList.add('text-accent', 'fw-bold'); 
             } else {
                 codigoPromocion.textContent = '';
                 this.innerHTML = '<i class="fas fa-tags me-2"></i> ¡Click para Promoción!';
-                codigoPromocion.classList.remove('text-danger', 'fw-bold');
+                codigoPromocion.classList.remove('text-accent', 'fw-bold');
             }
         });
     }
-
     
     const reservationForm = document.getElementById('reservationForm');
     const reservationResponse = document.getElementById('reservation-response');
@@ -91,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alert(`¡Reserva para el evento "${eventName}" registrada! (Simulación) Por favor, contacte para confirmar.`);
         });
     });
+
     
     document.addEventListener('click', function(e) {
         if (e.target.dataset.action === 'add-to-cart') {
