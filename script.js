@@ -1,91 +1,107 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const mainNav = document.getElementById('mainNav');
+    const cafeCarousel = document.getElementById('cafeCarousel');
+    if (cafeCarousel) {
+        new bootstrap.Carousel(cafeCarousel, {
+            interval: 5000, 
+            wrap: true
+        });
+    }
 
-    const updateNavbar = () => {
-        if (!mainNav) return;
-
-        if (window.scrollY === 0) {
-            mainNav.classList.remove('navbar-scrolled');
-        } else {
-            mainNav.classList.add('navbar-scrolled');
-        }
+    const smoothScrollTo = (targetId) => {
+        document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
     };
 
-    window.addEventListener('scroll', updateNavbar);
-    updateNavbar(); 
-    
-    const btnOrdenar = document.getElementById('btn-ordenar');
-    if (btnOrdenar) {
-        btnOrdenar.addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('¡Genial! Redirigiendo a nuestra plataforma de pedidos en línea.');
+    document.getElementById('btn-ordenar').addEventListener('click', function() {
+        alert('Redirigiendo a la plataforma de pedidos (Simulación)...');
+    });
+
+    const btnVerDesayuno = document.getElementById('btn-ver-desayuno');
+    if (btnVerDesayuno) {
+         btnVerDesayuno.addEventListener('click', function(e) {
+             e.preventDefault();
+             smoothScrollTo('#productos');
         });
     }
 
-    const btnConocerMenu = document.getElementById('btn-conocer-menu');
-    if (btnConocerMenu) {
-        btnConocerMenu.addEventListener('click', function(e) {
+    const btnVerMenuCompleto = document.getElementById('btn-ver-menu-completo');
+    if (btnVerMenuCompleto) {
+         btnVerMenuCompleto.addEventListener('click', function(e) {
              e.preventDefault();
-             document.querySelector('#productos').scrollIntoView({ behavior: 'smooth' });
-        });
-    }
-
-    const btnVerMasProductos = document.getElementById('btn-ver-mas-productos');
-    if (btnVerMasProductos) {
-         btnVerMasProductos.addEventListener('click', function(e) {
-             e.preventDefault();
-             this.textContent = '¡Gracias por ver nuestros productos!';
+             alert('¡Descargando PDF del Menú Completo! (Simulación)');
              this.disabled = true;
-             console.log('Se cargaría más contenido aquí...');
+             this.textContent = 'Menú Descargado';
         });
     }
+
     
-    const btnRevelar = document.getElementById('btn-revelar-promocion');
+    const btnPromocion = document.getElementById('btn-promocion-secreta');
     const codigoPromocion = document.getElementById('codigo-promocion');
     
-    if (btnRevelar && codigoPromocion) {
-        btnRevelar.addEventListener('click', function() {
-            if (codigoPromocion.textContent === '***') {
-                codigoPromocion.textContent = 'PASTEL2X1';
-                btnRevelar.textContent = 'Código Revelado!';
-                codigoPromocion.style.color = 'yellow'; 
-                setTimeout(() => codigoPromocion.style.color = '', 300); 
-                alert('¡Felicidades! Usa el código PASTEL2X1 al ordenar.');
+    if (btnPromocion && codigoPromocion) {
+        btnPromocion.addEventListener('click', function() {
+            if (codigoPromocion.textContent === '') {
+                codigoPromocion.textContent = 'CUPONLATTEART20';
+                this.textContent = '¡Código Activado! (20% OFF)';
+                codigoPromocion.classList.add('text-danger', 'fw-bold');
             } else {
-                codigoPromocion.textContent = '***';
-                btnRevelar.innerHTML = '<i class="fas fa-gift me-2"></i> Revelar Código Secreto';
+                codigoPromocion.textContent = '';
+                this.innerHTML = '<i class="fas fa-tags me-2"></i> ¡Click para Promoción!';
+                codigoPromocion.classList.remove('text-danger', 'fw-bold');
             }
         });
     }
+
     
-    const contactForm = document.getElementById('contactForm');
-    const formResponse = document.getElementById('form-response');
+    const reservationForm = document.getElementById('reservationForm');
+    const reservationResponse = document.getElementById('reservation-response');
     
-    if (contactForm && formResponse) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+    if (reservationForm) {
+        reservationForm.addEventListener('submit', function(e) {
+            e.preventDefault(); 
             
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            const name = document.getElementById('reserva-name').value;
+            const personas = document.getElementById('reserva-personas').value;
+            const fecha = document.getElementById('reserva-fecha').value;
 
-            console.log('Datos del formulario:', { name, email, message });
+            const today = new Date();
+            const selectedDate = new Date(fecha);
 
-            formResponse.innerHTML = `<div class="alert alert-success" role="alert">
-                ¡Gracias **${name}**! Tu mensaje ha sido enviado. Te contactaremos pronto.
+            if (selectedDate < today) {
+                reservationResponse.innerHTML = `<div class="alert alert-warning" role="alert">
+                    Por favor, selecciona una fecha y hora futura.
+                </div>`;
+                return;
+            }
+
+            console.log('Datos de Reserva:', { name, personas, fecha });
+
+            reservationResponse.innerHTML = `<div class="alert alert-success" role="alert">
+                ¡Reserva confirmada! **${name}**, para ${personas} personas el ${new Date(fecha).toLocaleString()}.
             </div>`;
 
-            contactForm.reset();
+            reservationForm.reset();
         });
     }
 
     
-    const productoModals = document.querySelectorAll('[data-bs-toggle="modal"]');
-    productoModals.forEach(item => {
-        item.addEventListener('click', function() {
-            const productoNombre = this.getAttribute('data-producto');
-            console.log(`El usuario está viendo detalles de: ${productoNombre}`);
+    document.querySelectorAll('[data-action="reservar-evento"]').forEach(button => {
+        button.addEventListener('click', function() {
+            const eventName = this.getAttribute('data-event-name');
+            alert(`¡Reserva para el evento "${eventName}" registrada! (Simulación) Por favor, contacte para confirmar.`);
         });
     });
+    
+    document.addEventListener('click', function(e) {
+        if (e.target.dataset.action === 'add-to-cart') {
+            const itemName = e.target.dataset.item;
+            alert(`¡Se añadió "${itemName}" al carrito!`);
+            const modalElement = e.target.closest('.modal');
+            if (modalElement) {
+                const modalInstance = bootstrap.Modal.getInstance(modalElement);
+                modalInstance.hide();
+            }
+        }
+    });
+
 });
