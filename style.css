@@ -1,136 +1,132 @@
 :root {
-    --color-primary: #FFD1DC; 
-    --color-secondary: #FFA07A; 
-    --color-tertiary: #FAF0E6; 
-    --color-primary-dark: #FFB6C1; 
-    --color-text: #484848; 
-    --color-dark: #A9A9A9; 
-    --color-light: #FFF8DC; 
+    --color-primary: #8B4513; 
+    --color-secondary: #D2B48C; 
+    --color-accent: #481d09; 
+    --color-primary-dark: #2F170C; 
+    --color-text: #000000; 
+    --color-light-text: #F5F5DC; 
+    --color-dark: #121212; 
 }
 
 body {
     font-family: 'Arial', sans-serif;
     color: var(--color-text);
-    background-color: var(--color-tertiary); 
+    background-color: var(--color-secondary); 
 }
 
 .page-section {
     padding: 6rem 0;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.page-section.bg-secondary {
+    background-color: var(--color-primary) !important; 
+    color: var(--color-light-text);
 }
 
 #mainNav {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: var(--color-light); 
-    border-bottom: 3px solid var(--color-primary-dark); 
-    transition: all 0.3s ease;
-}
-
-.btn-xl {
-    padding: 1rem 1.75rem;
-    font-size: 1.25rem;
-}
-
-.btn {
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
     background-color: var(--color-primary-dark); 
-    color: var(--color-text);
+    border-bottom: 4px solid var(--color-accent); 
 }
 
-.btn-secondary {
-    background-color: var(--color-secondary);
-    color: white;
+#mainNav .navbar-brand, #mainNav .nav-link {
+    color: var(--color-light-text) !important;
+    font-weight: bold;
 }
 
-.btn-secondary:hover {
-    background-color: #FA8072; 
-    color: white;
+#mainNav .nav-link:hover {
+    color: var(--color-primary) !important; 
 }
 
-.masthead {
-    padding-top: 74px; 
+.btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-light-text);
+    border: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-.carousel-image-placeholder {
-    height: 60vh; 
+.btn-accent:hover {
+    background-color: #5D2C19; 
+    color: var(--color-light-text);
+}
+
+.btn-primary-dark {
+    background-color: var(--color-primary-dark);
+    color: var(--color-light-text);
+}
+
+.btn-primary-dark:hover {
+    background-color: #481d09;
+    color: var(--color-light-text);
+}
+
+.carousel-img {
+    height: 60vh;
     min-height: 400px;
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    font-size: 2rem;
-}
-
-.carousel-image-placeholder.bg-secondary {
-     background-color: var(--color-secondary) !important;
-}
-
-.carousel-image-placeholder.bg-primary-dark {
-     background-color: var(--color-primary-dark) !important;
+    object-fit: cover;
 }
 
 .carousel-caption {
-    background-color: rgba(255, 255, 255, 0.7); 
-    color: var(--color-text);
-    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7); 
     border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.divider-custom .divider-custom-line {
+    background-color: var(--color-text);
 }
 
 .divider-custom .divider-custom-icon {
-    color: var(--color-secondary); 
+    color: var(--color-accent); 
+}
+
+.divider-custom.divider-light .divider-custom-line {
+    background-color: var(--color-light-text);
+}
+
+.divider-custom.divider-light .divider-custom-icon {
+    color: var(--color-light-text);
 }
 
 .portfolio-item-caption {
-    background-color: rgba(255, 160, 122, 0.85); 
-    opacity: 0;
-}
-
-.portfolio-item-caption:hover {
-    opacity: 1;
-}
-
-.card-placeholder {
-
-    border: 1px dashed var(--color-secondary);
-    background-color: var(--color-light) !important;
-    border-radius: 0.5rem;
+    background-color: rgba(72, 29, 9, 0.85); 
 }
 
 .nav-tabs .nav-link {
     color: var(--color-text);
-    border-color: var(--color-secondary);
+    background-color: var(--color-secondary);
+    border-color: var(--color-primary);
+    font-weight: bold;
 }
 
 .nav-tabs .nav-link.active {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary); 
     color: white;
-    border-color: var(--color-secondary);
+    border-color: var(--color-primary);
+}
+
+#eventos .card {
+    border: 3px solid var(--color-primary);
+    background-color: #FFF;
 }
 
 #contacto {
-    background-color: var(--color-secondary); 
+    background-color: var(--color-primary-dark); 
 }
 
 #contacto .form-control {
-    background-color: var(--color-tertiary);
+    background-color: var(--color-secondary);
     color: var(--color-text);
-    border: 1px solid var(--color-primary-dark);
-}
-
-#contacto .form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(255, 209, 220, 0.5); 
+    border: 1px solid var(--color-primary);
 }
 
 .footer {
     background-color: var(--color-dark); 
-    color: white;
 }
 
 .copyright {
-    background-color: var(--color-text);
+    background-color: var(--color-text) !important; 
+    color: var(--color-light-text);
 }
