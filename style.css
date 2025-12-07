@@ -1,38 +1,30 @@
 :root {
     --color-primary: #FFD1DC; 
-    --color-secondary: #B0E0E6; 
-    --color-tertiary: #F0FFF0; 
+    --color-secondary: #FFA07A; 
+    --color-tertiary: #FAF0E6; 
+    --color-primary-dark: #FFB6C1; 
     --color-text: #484848; 
     --color-dark: #A9A9A9; 
+    --color-light: #FFF8DC; 
 }
 
 body {
     font-family: 'Arial', sans-serif;
     color: var(--color-text);
+    background-color: var(--color-tertiary); 
 }
 
 .page-section {
     padding: 6rem 0;
+    background-color: var(--color-tertiary);
 }
 
 #mainNav {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: var(--color-tertiary); 
-    border-bottom: 3px solid var(--color-primary); 
-}
-
-#mainNav .navbar-brand {
-    color: var(--color-text);
-    font-weight: bold;
-}
-
-#mainNav .nav-link {
-    color: var(--color-dark);
-}
-
-#mainNav .nav-link:hover {
-    color: var(--color-primary);
+    background-color: var(--color-light); 
+    border-bottom: 3px solid var(--color-primary-dark); 
+    transition: all 0.3s ease;
 }
 
 .btn-xl {
@@ -48,89 +40,53 @@ body {
 }
 
 .btn:hover {
-    background-color: #FFB6C1; 
+    background-color: var(--color-primary-dark); 
     color: var(--color-text);
 }
 
 .btn-secondary {
     background-color: var(--color-secondary);
-    color: var(--color-text);
+    color: white;
 }
 
 .btn-secondary:hover {
-    background-color: #87CEFA;
-    color: var(--color-text);
+    background-color: #FA8072; 
+    color: white;
 }
 
 .masthead {
-    padding-top: calc(7rem + 74px); 
-    padding-bottom: 6rem;
-    background-color: var(--color-secondary); 
-
-    background-size: cover;
-    background-position: center;
+    padding-top: 74px; 
 }
 
-.masthead-heading {
-    font-size: 3rem;
-    line-height: 2.75rem;
-    color: var(--color-dark); 
+.carousel-image-placeholder {
+    height: 60vh; 
+    min-height: 400px;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-size: 2rem;
 }
 
-.masthead-subheading {
-     font-size: 1.5rem;
-     color: var(--color-text);
+.carousel-image-placeholder.bg-secondary {
+     background-color: var(--color-secondary) !important;
 }
 
-.divider-custom {
-    margin: 1.25rem 0 1.5rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.carousel-image-placeholder.bg-primary-dark {
+     background-color: var(--color-primary-dark) !important;
 }
 
-.divider-custom .divider-custom-line {
-    width: 100%;
-    max-width: 7rem;
-    height: 0.25rem;
-    background-color: var(--color-text);
-    border-radius: 1rem;
-    opacity: 0.5;
+.carousel-caption {
+    background-color: rgba(255, 255, 255, 0.7); 
+    color: var(--color-text);
+    padding: 1rem;
+    border-radius: 0.5rem;
 }
 
 .divider-custom .divider-custom-icon {
-    font-size: 2rem;
-    margin: 0 1rem;
-    color: var(--color-primary);
-}
-
-.divider-custom.divider-light .divider-custom-line {
-    background-color: #FFF;
-    opacity: 0.8;
-}
-
-.divider-custom.divider-light .divider-custom-icon {
-    color: #FFF;
-}
-
-.portfolio-item {
-    position: relative;
-    display: block;
-    max-width: 25rem;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.portfolio-item:hover {
-    transform: translateY(-5px);
+    color: var(--color-secondary); 
 }
 
 .portfolio-item-caption {
-    transition: opacity 0.25s ease;
-    background-color: rgba(255, 193, 203, 0.8); 
+    background-color: rgba(255, 160, 122, 0.85); 
     opacity: 0;
 }
 
@@ -139,41 +95,42 @@ body {
 }
 
 .card-placeholder {
-    min-height: 200px;
-    border: 1px dashed var(--color-primary);
-    background-color: var(--color-tertiary) !important;
-    color: var(--color-dark);
+
+    border: 1px dashed var(--color-secondary);
+    background-color: var(--color-light) !important;
     border-radius: 0.5rem;
 }
 
-#promociones {
-    background-color: var(--color-primary); 
+.nav-tabs .nav-link {
+    color: var(--color-text);
+    border-color: var(--color-secondary);
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--color-secondary);
+    color: white;
+    border-color: var(--color-secondary);
+}
+
+#contacto {
+    background-color: var(--color-secondary); 
+}
+
+#contacto .form-control {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border: 1px solid var(--color-primary-dark);
+}
+
+#contacto .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 209, 220, 0.5); 
 }
 
 .footer {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
     background-color: var(--color-dark); 
     color: white;
 }
 
 .copyright {
     background-color: var(--color-text);
-}
-
-.btn-social {
-    background-color: #FFF;
-    color: var(--color-primary);
-    border-radius: 100%;
-    height: 3.25rem;
-    width: 3.25rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-}
-
-.btn-social:hover {
-    background-color: var(--color-secondary);
-    color: #FFF;
 }
