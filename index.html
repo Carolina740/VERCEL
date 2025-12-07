@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafetería "Dulce Despertar" | El Mejor Café y Postres</title>
+    <title>Cafetería "Dulce Despertar" | Café y Negro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#">Dulce Despertar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@
                     <li class="nav-item"><a class="nav-link" href="#eventos">Eventos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto">Reserva/Contacto</a></li>
                     <li class="nav-item">
-                        <button class="btn btn-sm ms-lg-3" id="btn-ordenar">Ordenar Online</button>
+                        <button class="btn btn-sm btn-accent ms-lg-3" id="btn-ordenar">Ordenar Online</button>
                     </li>
                 </ul>
             </div>
@@ -41,33 +41,27 @@
             <div class="carousel-inner">
                 
                 <div class="carousel-item active">
-                    <div class="carousel-image-placeholder d-block w-100 bg-secondary d-flex justify-content-center align-items-center">
-                         <h2 class="text-white">¡Nuevo! Desayuno Completo</h2>
-                    </div>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Empieza el día con energía</h5>
+                    <img src="https://images.pexels.com/photos/208755/pexels-photo-208755.jpeg?auto=compress&cs=tinysrgb&w=640&h=420&fit=crop" class="d-block w-100 carousel-img" alt="Desayuno completo">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h2 class="text-white">¡Nuevo! Desayuno Completo</h2>
                         <p>Tostadas, fruta fresca y café premium.</p>
-                         <button class="btn btn-xl mt-2" id="btn-ver-desayuno">Ver Desayunos</button>
+                         <button class="btn btn-lg btn-accent mt-2" id="btn-ver-desayuno">Ver Desayunos</button>
                     </div>
                 </div>
                 
                 <div class="carousel-item">
-                     <div class="carousel-image-placeholder d-block w-100 bg-primary-dark d-flex justify-content-center align-items-center">
-                         <h2 class="text-white">Nuestra Esquina Acogedora</h2>
-                    </div>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Ambiente cálido y tranquilo</h5>
+                     <img src="https://images.pexels.com/photos/1031754/pexels-photo-1031754.jpeg?auto=compress&cs=tinysrgb&w=640&h=420&fit=crop" class="d-block w-100 carousel-img" alt="Interior de la cafetería">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h2 class="text-white">Nuestra Esquina Acogedora</h2>
                         <p>El lugar perfecto para trabajar o relajarse.</p>
                     </div>
                 </div>
                 
                 <div class="carousel-item">
-                    <div class="carousel-image-placeholder d-block w-100 bg-secondary d-flex justify-content-center align-items-center">
-                         <h2 class="text-white">Pastelería Artesanal</h2>
-                    </div>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Hecho en casa, con amor</h5>
-                        <p>Prueba nuestro famoso pastel de triple chocolate.</p>
+                    <img src="https://images.pexels.com/photos/1483030/pexels-photo-1483030.jpeg?auto=compress&cs=tinysrgb&w=640&h=420&fit=crop" class="d-block w-100 carousel-img" alt="Pastelería artesanal">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h2 class="text-white">Pastelería Artesanal</h2>
+                        <p>Hecho en casa, con amor.</p>
                     </div>
                 </div>
 
@@ -111,15 +105,17 @@
                         <div class="col-md-6 col-lg-4 mb-5">
                             <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#productoModal1" data-producto="Capuchino">
                                 <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"><div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div></div>
-                                <div class="card-placeholder text-center p-5 bg-light-subtle"><i class="fas fa-coffee fa-4x text-muted"></i><h5 class="mt-3">Capuchino Clásico</h5></div>
+                                <img class="img-fluid portfolio-img" src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=300&h=250&fit=crop" alt="Capuchino Clásico">
                             </div>
+                            <p class="text-center mt-2 fw-bold">Capuchino Clásico</p>
                         </div>
 
                         <div class="col-md-6 col-lg-4 mb-5">
                             <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#productoModal2" data-producto="Iced Mocha">
                                 <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"><div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div></div>
-                                <div class="card-placeholder text-center p-5 bg-light-subtle"><i class="fas fa-glass-whiskey fa-4x text-muted"></i><h5 class="mt-3">Iced Mocha</h5></div>
+                                <img class="img-fluid portfolio-img" src="https://images.pexels.com/photos/4034874/pexels-photo-4034874.jpeg?auto=compress&cs=tinysrgb&w=300&h=250&fit=crop" alt="Iced Mocha">
                             </div>
+                             <p class="text-center mt-2 fw-bold">Iced Mocha</p>
                         </div>
                     </div>
                 </div>
@@ -130,15 +126,17 @@
                         <div class="col-md-6 col-lg-4 mb-5">
                             <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#productoModal3" data-producto="Tarta de Queso">
                                 <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"><div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div></div>
-                                <div class="card-placeholder text-center p-5 bg-light-subtle"><i class="fas fa-cake-candles fa-4x text-muted"></i><h5 class="mt-3">Tarta de Queso</h5></div>
+                                <img class="img-fluid portfolio-img" src="https://images.pexels.com/photos/3926640/pexels-photo-3926640.jpeg?auto=compress&cs=tinysrgb&w=300&h=250&fit=crop" alt="Tarta de Queso">
                             </div>
+                            <p class="text-center mt-2 fw-bold">Tarta de Queso</p>
                         </div>
 
                         <div class="col-md-6 col-lg-4 mb-5">
                             <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#productoModal4" data-producto="Croissant de Almendras">
                                 <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"><div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div></div>
-                                <div class="card-placeholder text-center p-5 bg-light-subtle"><i class="fas fa-bread-slice fa-4x text-muted"></i><h5 class="mt-3">Croissant Almendras</h5></div>
+                                <img class="img-fluid portfolio-img" src="https://images.pexels.com/photos/6209590/pexels-photo-6209590.jpeg?auto=compress&cs=tinysrgb&w=300&h=250&fit=crop" alt="Croissant de Almendras">
                             </div>
+                             <p class="text-center mt-2 fw-bold">Croissant Almendras</p>
                         </div>
                     </div>
                 </div>
@@ -148,22 +146,23 @@
                          <div class="col-md-6 col-lg-4 mb-5">
                             <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#productoModal5" data-producto="Sándwich Pavo">
                                 <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"><div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div></div>
-                                <div class="card-placeholder text-center p-5 bg-light-subtle"><i class="fas fa-sandwich fa-4x text-muted"></i><h5 class="mt-3">Sándwich de Pavo y Queso</h5></div>
+                                <img class="img-fluid portfolio-img" src="https://images.pexels.com/photos/1647414/pexels-photo-1647414.jpeg?auto=compress&cs=tinysrgb&w=300&h=250&fit=crop" alt="Sándwich de Pavo y Queso">
                             </div>
+                             <p class="text-center mt-2 fw-bold">Sándwich de Pavo y Queso</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="text-center mt-4">
-                 <button class="btn btn-lg" id="btn-ver-menu-completo">Ver Menú Completo</button>
+                 <button class="btn btn-lg btn-accent" id="btn-ver-menu-completo">Ver Menú Completo (PDF)</button>
             </div>
         </div>
     </section>
     
     <section class="page-section bg-secondary text-white" id="galeria">
         <div class="container text-center">
-            <h2 class="page-section-heading text-uppercase text-white mb-4">Nuestra Casa</h2>
+            <h2 class="page-section-heading text-uppercase text-white mb-4">Nuestro Ambiente</h2>
              <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon"><i class="fas fa-camera"></i></div>
@@ -172,16 +171,16 @@
             
             <div class="row g-4">
                 <div class="col-md-4">
-                     <div class="card-placeholder p-5 h-100">Rincón de Lectura</div>
+                     <img src="https://images.pexels.com/photos/4614210/pexels-photo-4614210.jpeg?auto=compress&cs=tinysrgb&w=300&h=250&fit=crop" class="img-fluid rounded shadow-lg" alt="Rincón de Lectura">
                 </div>
                 <div class="col-md-4">
-                     <div class="card-placeholder p-5 h-100">Mesa Compartida</div>
+                     <img src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=300&h=250&fit=crop" class="img-fluid rounded shadow-lg" alt="Mesa Compartida">
                 </div>
                 <div class="col-md-4">
-                     <div class="card-placeholder p-5 h-100">Vitrina de Pasteles</div>
+                     <img src="https://images.pexels.com/photos/5920589/pexels-photo-5920589.jpeg?auto=compress&cs=tinysrgb&w=300&h=250&fit=crop" class="img-fluid rounded shadow-lg" alt="Vitrina de Pasteles">
                 </div>
             </div>
-            <p class="mt-4 lead">¡Visítanos y comparte tus fotos usando #DulceDespertar!</p>
+            <p class="mt-4 lead">¡Visítanos y comparte tus fotos usando **#DulceDespertar**!</p>
         </div>
     </section>
 
@@ -195,27 +194,27 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 mb-4">
-                    <div class="card p-4 h-100 shadow-sm">
+                    <div class="card p-4 h-100 shadow-lg border-2 border-primary">
                         <h4>Noche de Micrófono Abierto 🎤</h4>
-                        <p>Viernes 20:00h: Ven a cantar, recitar o tocar tu instrumento. ¡El talento local brilla aquí! Hay un descuento del **15%** en bebidas. *Haz clic en el botón para reservar tu lugar.*</p>
-                         <button class="btn btn-secondary mt-auto" data-action="reservar-evento" data-event-name="Micrófono Abierto">Reservar Lugar</button>
+                        <p>**Viernes 20:00h:** Ven a cantar, recitar o tocar tu instrumento. Descuento del **15%** en bebidas.</p>
+                         <button class="btn btn-accent mt-auto" data-action="reservar-evento" data-event-name="Micrófono Abierto">Reservar Lugar</button>
                     </div>
                 </div>
                  <div class="col-lg-6 mb-4">
-                    <div class="card p-4 h-100 shadow-sm">
+                    <div class="card p-4 h-100 shadow-lg border-2 border-primary">
                         <h4>Taller de Latte Art 🎨</h4>
-                        <p>Sábado 10:00h: Aprende a hacer corazones y rosettas en tu café. Incluye todos los materiales y tu café de práctica. Cupos limitados.</p>
-                         <button class="btn mt-auto" id="btn-promocion-secreta">
+                        <p>**Sábado 10:00h:** Aprende a hacer corazones. Incluye materiales. Cupos limitados.</p>
+                         <button class="btn mt-auto btn-primary-dark" id="btn-promocion-secreta">
                             <i class="fas fa-tags me-2"></i> ¡Click para Promoción!
                         </button>
-                        <p class="mt-2 text-center" id="codigo-promocion"></p>
+                        <p class="mt-2 text-center text-accent fw-bold" id="codigo-promocion"></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="page-section bg-secondary text-white" id="contacto">
+    <section class="page-section bg-primary-dark text-white" id="contacto">
         <div class="container">
             <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Reserva tu Mesa</h2>
             <div class="divider-custom divider-light">
@@ -239,7 +238,7 @@
                             <label for="reserva-fecha">Fecha y Hora</label>
                         </div>
                         <div class="d-grid">
-                            <button class="btn btn-xl btn-light" id="submitReservationButton" type="submit">Confirmar Reserva</button>
+                            <button class="btn btn-xl btn-accent" id="submitReservationButton" type="submit">Confirmar Reserva</button>
                         </div>
                          <div class="mt-3 text-center" id="reservation-response"></div>
                     </form>
@@ -248,10 +247,10 @@
         </div>
     </section>
 
-    <footer class="footer text-center">
+    <footer class="footer text-center bg-dark text-white">
        </footer>
     
-    <div class="copyright py-4 text-center text-white">
+    <div class="copyright py-4 text-center bg-dark-secondary text-white">
         <div class="container"><small>Copyright &copy; Dulce Despertar 2025</small></div>
     </div>
 
@@ -269,12 +268,10 @@
                                     <div class="divider-custom-icon"><i class="fas fa-mug-hot"></i></div>
                                     <div class="divider-custom-line"></div>
                                 </div>
-                                <div class="card-placeholder-large p-5 bg-light-subtle mb-5">
-                                    <i class="fas fa-coffee fa-8x text-muted"></i>
-                                </div>
+                                <img class="img-fluid d-block mx-auto mb-5 rounded shadow-sm" src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=640&h=420&fit=crop" alt="Capuchino Clásico">
                                 <p class="mb-4">Doble shot de espresso con leche texturizada y una capa generosa de espuma. Puedes añadir canela o cacao.</p>
-                                <button class="btn btn-secondary me-2" data-action="add-to-cart" data-item="Capuchino">Añadir a Pedido</button>
-                                <button class="btn btn-light" data-bs-dismiss="modal">
+                                <button class="btn btn-accent me-2" data-action="add-to-cart" data-item="Capuchino">Añadir a Pedido</button>
+                                <button class="btn btn-primary-dark" data-bs-dismiss="modal">
                                     <i class="fas fa-xmark fa-fw"></i> Cerrar
                                 </button>
                             </div>
